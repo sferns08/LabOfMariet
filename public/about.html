@@ -52,37 +52,80 @@
   <!-- ABOUT -->
   <main class="mx-auto max-w-6xl px-4 py-12">
     <section class="mb-10">
-      <h1 class="text-4xl md:text-5xl font-extrabold">Hola, soy <span class="text-brand">Mariet</span></h1>
-      <p class="mt-4 text-zinc-600 dark:text-zinc-300 max-w-prose">
-        Breve bio: rol, foco y lo que te gusta construir. Añade 2-3 logros y tu propuesta de valor.
-      </p>
-      <div class="mt-6 flex gap-3">
-        <a href="/projects.html" class="px-4 py-2 rounded-xl bg-brand text-black font-medium">Ver proyectos</a>
-        <a href="/contact.html" class="px-4 py-2 rounded-xl border border-zinc-300 dark:border-zinc-700">Contactar</a>
-      </div>
-    </section>
+      <h1 class="text-4xl md:text-5xl font-extrabold">The <span class="text-brand">LAB</span></h1>
 
-    <section class="grid md:grid-cols-2 gap-6">
-      <article class="card">
-        <h2 class="text-xl font-semibold mb-2">Experiencia</h2>
-        <ul class="list-disc ml-5 space-y-1 text-zinc-700 dark:text-zinc-300">
-          <li>Rol / Empresa — impacto y tecnologías clave.</li>
-          <li>Rol / Empresa — impacto y tecnologías clave.</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h2 class="text-xl font-semibold mb-2">Habilidades</h2>
-        <div class="flex flex-wrap gap-2 text-sm">
-          <span class="chip">Vue</span><span class="chip">Node</span><span class="chip">PostgreSQL</span>
-          <span class="chip">Tailwind</span><span class="chip">Docker</span>
-        </div>
-      </article>
-    </section>
+
+<!-- CARRUSEL -->
+<div class="relative mt-8 max-w-5xl mx-auto overflow-hidden rounded-2xl shadow-xl">
+  <div id="carousel" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%)">
+    <!-- Slide 1 -->
+    <div class="min-w-full relative">
+      <img src="resources/img1.png" alt="Proyecto 1" class="w-full h-80 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 p-6 text-white">
+        <h3 class="text-2xl font-bold">Creatividad infinita, 24/7</h3>
+        <p class="mt-1 text-sm opacity-90">Generamos miles de variantes y elegimos la ganadora</p>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="min-w-full relative">
+      <img src="resources/img2.png" alt="Proyecto 2" class="w-full h-80 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 p-6 text-white">
+        <h3 class="text-2xl font-bold">Tu cliente ya sabe lo que quiere</h3>
+        <p class="mt-1 text-sm opacity-90">IA que predice comportamientos con 95% precisión</p>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="min-w-full relative">
+      <img src="resources/img3.png" alt="Proyecto 3" class="w-full h-80 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 p-6 text-white">
+        <h3 class="text-2xl font-bold">Resultados que multiplican x10</h3>
+        <p class="mt-1 text-sm opacity-90">ROI automatizado: de leads a ventas en tiempo real</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones de navegación -->
+  <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-2 rounded-full transition">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+  </button>
+  <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-2 rounded-full transition">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </button>
+
+  <!-- Indicadores -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+    <button class="indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition" data-slide="0"></button>
+    <button class="indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition" data-slide="1"></button>
+    <button class="indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition" data-slide="2"></button>
+  </div>
+</div>
+      <div class="mt-8 text-center max-w-4xl mx-auto">
+  <p class="text-2xl md:text-3xl font-bold text-zinc-800 dark:text-zinc-100 leading-tight">
+    Campañas visuales completas <span class="text-brand">en días</span>, no semanas.
+  </p>
+  <p class="mt-3 text-lg md:text-xl text-zinc-600 dark:text-zinc-300">
+    Dirección creativa con Inteligencia Artificial para marcas que buscan alma, estética y velocidad.
+  </p>
+
+  <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+    <a href="/projects.html" class="px-6 py-3 rounded-xl bg-brand text-black font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+      Explorar el lab
+    </a>
+    <a href="/contact.html" class="px-6 py-3 rounded-xl border-2 border-zinc-400 dark:border-zinc-600 text-zinc-800 dark:text-zinc-200 font-medium text-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all">
+      Colabora conmigo
+    </a>
+  </div>
+</div>
   </main>
 
   <footer class="border-t border-zinc-200/60 dark:border-zinc-800/60">
+    
     <div class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between text-sm">
       <span>© <span id="y"></span> LabOfMariet</span>
+      <a class="opacity-70 hover:opacity-100" href="https://www.linkedin.com/in/mario-fuertes-cabello-753249202/" target="_blank" rel="noreferrer">LinkedIn</a>
       <a class="opacity-70 hover:opacity-100" href="https://www.instagram.com/labofmariet" target="_blank" rel="noreferrer">Instagram</a>
     </div>
   </footer>
@@ -104,6 +147,46 @@
     const here = location.pathname.split('/').pop() || 'about.html'
     const key = here.includes('project')?'projects':here.includes('contact')?'contact':'about'
     document.querySelectorAll(`[data-nav="${key}"]`).forEach(a=>a.classList.add('nav-active'))
+    // CARRUSEL
+const carousel = document.getElementById('carousel')
+const prevBtn = document.getElementById('prev')
+const nextBtn = document.getElementById('next')
+const indicators = document.querySelectorAll('.indicator')
+let currentSlide = 0
+const totalSlides = 3
+
+function goToSlide(index) {
+  if (index < 0) index = totalSlides - 1
+  if (index >= totalSlides) index = 0
+  currentSlide = index
+  carousel.style.transform = `translateX(-${currentSlide * 100}%)`
+  indicators.forEach((ind, i) => {
+    ind.classList.toggle('bg-white', i === currentSlide)
+    ind.classList.toggle('bg-white/50', i !== currentSlide)
+  })
+}
+
+// Botones
+nextBtn?.addEventListener('click', () => goToSlide(currentSlide + 1))
+prevBtn?.addEventListener('click', () => goToSlide(currentSlide - 1))
+
+// Indicadores
+indicators.forEach(ind => {
+  ind.addEventListener('click', () => goToSlide(parseInt(ind.dataset.slide)))
+})
+
+// Auto-avance (opcional, cada 5 segundos)
+let autoAdvance = setInterval(() => goToSlide(currentSlide + 1), 5000)
+
+// Pausar al hacer hover
+const carouselContainer = carousel.parentElement
+carouselContainer.addEventListener('mouseenter', () => clearInterval(autoAdvance))
+carouselContainer.addEventListener('mouseleave', () => {
+  autoAdvance = setInterval(() => goToSlide(currentSlide + 1), 5000)
+})
+
+// Inicializar indicador activo
+goToSlide(0)
   </script>
 </body>
 </html>
