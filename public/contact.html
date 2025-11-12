@@ -1,77 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contacto — Portfolio</title>
-  <meta name="description" content="Formulario de contacto." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto — LabOfMariet</title>
+  <meta name="description" content="¿Tienes un proyecto? Cuéntame tu idea o pregunta por KITS." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:'#ffb400'}}},darkMode:'class'}</script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: '#ffb400' } } },
+      darkMode: 'class'
+    }
+  </script>
   <style>
-    .nav-link{padding:0.375rem 0.5rem;border-radius:0.75rem}
-    .nav-active{background:rgba(0,0,0,0.06)}
-    .card{border:1px solid rgba(24,24,27,.12);border-radius:1rem;padding:1rem}
-    @media (prefers-color-scheme: dark){
-      .nav-active{background:rgba(255,255,255,0.1)}
-      .card{border-color:rgba(255,255,255,.12)}
+    .nav-link { padding: 0.375rem 0.5rem; border-radius: 0.75rem; }
+    .nav-active { background: rgba(0, 0, 0, 0.06); }
+    @media (prefers-color-scheme: dark) {
+      .nav-active { background: rgba(255, 255, 255, 0.1); }
     }
   </style>
 </head>
 <body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50">
+
   <!-- NAV -->
   <header class="border-b border-zinc-200/60 dark:border-zinc-800/60">
     <div class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
       <a href="/about.html" class="font-bold tracking-tight">LabOfMariet<span class="text-brand">.</span></a>
       <nav class="hidden md:flex items-center gap-2">
-        <a href="/about.html"    class="nav-link hover:text-brand" data-nav="about">Sobre mí</a>
-        <a href="/projects.html" class="nav-link hover:text-brand" data-nav="projects">Proyectos</a>
-        <a href="/contact.html"  class="nav-link hover:text-brand" data-nav="contact">Contacto</a>
+        <a href="/about.html"    class="nav-link hover:text-brand" data-nav="about">The LAB</a>
+        <a href="/projects.html" class="nav-link hover:text-brand" data-nav="projects">Servicios</a>
+        <a href="/contact.html"  class="nav-link hover:text-brand nav-active" data-nav="contact">Contacto</a>
       </nav>
       <div class="flex items-center gap-2">
-        <button id="themeToggle" class="text-sm px-2 py-1 rounded-lg border border-zinc-300 dark:border-zinc-700">☾/☀</button>
-        <button id="menu" class="md:hidden p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800" aria-label="Abrir menú">☰</button>
+        <button id="themeToggle" class="text-sm px-2 py-1 rounded-lg border border-zinc-300 dark:border-zinc-700">Dark/Light</button>
+        <button id="menu" class="md:hidden p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800" aria-label="Abrir menú">Menu</button>
       </div>
     </div>
     <div id="mobile" class="md:hidden hidden border-t border-zinc-200/60 dark:border-zinc-800/60">
       <nav class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
-        <a href="/about.html"    class="nav-link hover:text-brand" data-nav="about">Sobre mí</a>
-        <a href="/projects.html" class="nav-link hover:text-brand" data-nav="projects">Proyectos</a>
-        <a href="/contact.html"  class="nav-link hover:text-brand" data-nav="contact">Contacto</a>
+        <a href="/about.html"    class="nav-link hover:text-brand" data-nav="about">The LAB</a>
+        <a href="/projects.html" class="nav-link hover:text-brand" data-nav="projects">Servicios</a>
+        <a href="/contact.html"  class="nav-link hover:text-brand nav-active" data-nav="contact">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <!-- CONTACT -->
-  <main class="mx-auto max-w-6xl px-4 py-12">
-    <h1 class="text-3xl md:text-4xl font-extrabold mb-6">Contacto</h1>
-    <div class="card max-w-xl">
-      <form class="space-y-3" onsubmit="event.preventDefault(); alert('De momento esto es solo front 😉');">
-        <input placeholder="Nombre" class="w-full px-4 py-2 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900" required>
-        <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900" required>
-        <textarea rows="6" placeholder="Mensaje" class="w-full px-4 py-2 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900" required></textarea>
-        <button class="px-4 py-2 rounded-xl bg-black text-white dark:bg-white dark:text-black">Enviar</button>
+  <!-- HERO + CONTACTO -->
+  <main class="mx-auto max-w-6xl px-4 py-12 space-y-16">
+
+    <!-- TÍTULO + IMAGEN ALARGADA -->
+    <section class="text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight">
+        TRABAJEMOS
+      </h1>
+
+      <!-- IMAGEN ALARGADA (hero horizontal) -->
+      <div class="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl mb-12">
+        <img 
+          src="resources/ojos.png" 
+          alt="Trabajemos juntos" 
+          class="w-full h-full object-cover"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      </div>
+
+      <!-- TEXTO MOTIVACIONAL -->
+      <div class="max-w-3xl mx-auto space-y-6 text-lg md:text-xl">
+        <p class="font-medium">
+          ¿Tienes un proyecto o una marca que quieres elevar visualmente?
+        </p>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          Cuéntame tu idea o pregunta por <strong>KITS</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="max-w-2xl mx-auto bg-white dark:bg-zinc-800 p-8 md:p-10 rounded-2xl shadow-xl border border-zinc-200 dark:border-zinc-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Envía tu propuesta</h2>
+      
+      <form action="#" method="POST" class="space-y-6">
+        <input 
+          type="text" 
+          placeholder="Nombre" 
+          required 
+          class="w-full px-5 py-3 rounded-xl border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand transition"
+        >
+        <input 
+          type="text" 
+          placeholder="Marca / Empresa" 
+          required 
+          class="w-full px-5 py-3 rounded-xl border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand transition"
+        >
+        <textarea 
+          placeholder="Breve descripción de tu idea" 
+          rows="5" 
+          required 
+          class="w-full px-5 py-3 rounded-xl border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand resize-none transition"
+        ></textarea>
+        <input 
+          type="email" 
+          placeholder="Email" 
+          required 
+          class="w-full px-5 py-3 rounded-xl border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand transition"
+        >
+        <input 
+          type="tel" 
+          placeholder="WhatsApp (opcional)" 
+          class="w-full px-5 py-3 rounded-xl border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand transition"
+        >
+
+        <button 
+          type="submit" 
+          class="w-full py-4 rounded-xl bg-brand text-black font-bold text-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
+        >
+          Enviar propuesta
+        </button>
       </form>
-      <p class="text-sm opacity-70 mt-3">Cuando montemos el backend, enviaremos el formulario a <code>/api/contact</code>.</p>
-    </div>
+
+      <p class="text-xs text-center opacity-60 mt-6">
+        Tus datos están seguros. Solo los usaré para responderte.
+      </p>
+    </section>
+
   </main>
 
-  <footer class="border-t border-zinc-200/60 dark:border-zinc-800/60">
+  <!-- FOOTER -->
+  <footer class="border-t border-zinc-200/60 dark:border-zinc-800/60 mt-20">
     <div class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between text-sm">
-      <span>© <span id="y"></span> Tu Nombre</span>
-      <a class="opacity-70 hover:opacity-100" href="https://github.com/tuusuario" target="_blank" rel="noreferrer">GitHub</a>
+      <span>© <span id="y"></span> LabOfMariet</span>
+      <div class="flex gap-4">
+        <a class="opacity-70 hover:opacity-100" href="https://www.linkedin.com/in/mario-fuertes-cabello-753249202/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="opacity-70 hover:opacity-100" href="https://www.instagram.com/labofmariet" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear()
-    const menuBtn=document.getElementById('menu'), mobile=document.getElementById('mobile')
-    menuBtn?.addEventListener('click', ()=> mobile.classList.toggle('hidden'))
-    const themeToggle=document.getElementById('themeToggle')
-    if(localStorage.theme==='dark') document.documentElement.classList.add('dark')
-    themeToggle?.addEventListener('click', ()=>{
-      document.documentElement.classList.toggle('dark')
-      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark':'light'
-    })
-    document.querySelectorAll('[data-nav="contact"]').forEach(a=>a.classList.add('nav-active'))
+    // Año actual
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Menú móvil
+    const menuBtn = document.getElementById('menu');
+    const mobile = document.getElementById('mobile');
+    menuBtn?.addEventListener('click', () => mobile.classList.toggle('hidden'));
+
+    // Dark mode
+    const themeToggle = document.getElementById('themeToggle');
+    if (localStorage.theme === 'dark') document.documentElement.classList.add('dark');
+    themeToggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+
+    // Nav active
+    document.querySelectorAll('[data-nav="contact"]').forEach(a => a.classList.add('nav-active'));
   </script>
 </body>
 </html>

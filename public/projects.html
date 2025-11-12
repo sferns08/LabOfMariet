@@ -1,116 +1,475 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Proyectos — Portfolio</title>
-  <meta name="description" content="Listado de proyectos destacados." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:'#ffb400'}}},darkMode:'class'}</script>
-  <style>
-    .nav-link{padding:0.375rem 0.5rem;border-radius:0.75rem}
-    .nav-active{background:rgba(0,0,0,0.06)}
-    .card{border:1px solid rgba(24,24,27,.12);border-radius:1rem;padding:1rem}
-    .chip{padding:.25rem .5rem;border-radius:999px;background:rgba(24,24,27,.06)}
-    @media (prefers-color-scheme: dark){
-      .nav-active{background:rgba(255,255,255,0.1)}
-      .card{border-color:rgba(255,255,255,.12)}
-      .chip{background:rgba(255,255,255,.08)}
-    }
-  </style>
-</head>
-<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50">
-  <!-- NAV -->
-  <header class="border-b border-zinc-200/60 dark:border-zinc-800/60">
-    <div class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
-      <a href="/about.html" class="font-bold tracking-tight">LabOfMariet<span class="text-brand">.</span></a>
-      <nav class="hidden md:flex items-center gap-2">
-        <a href="/about.html"    class="nav-link hover:text-brand" data-nav="about">Sobre mí</a>
-        <a href="/projects.html" class="nav-link hover:text-brand" data-nav="projects">Proyectos</a>
-        <a href="/contact.html"  class="nav-link hover:text-brand" data-nav="contact">Contacto</a>
-      </nav>
-      <div class="flex items-center gap-2">
-        <button id="themeToggle" class="text-sm px-2 py-1 rounded-lg border border-zinc-300 dark:border-zinc-700">☾/☀</button>
-        <button id="menu" class="md:hidden p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800" aria-label="Abrir menú">☰</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Servicios — LabOfMariet</title>
+    <meta
+      name="description"
+      content="Campañas visuales, realismo humano, IA y moda con dirección creativa."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { brand: "#ffb400" } } },
+        darkMode: "class",
+      };
+    </script>
+    <style>
+      .nav-link {
+        padding: 0.375rem 0.5rem;
+        border-radius: 0.75rem;
+      }
+      .nav-active {
+        background: rgba(0, 0, 0, 0.06);
+      }
+      .card {
+        border: 1px solid rgba(24, 24, 27, 0.12);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+      .chip {
+        padding: 0.25rem 0.5rem;
+        border-radius: 999px;
+        background: rgba(24, 24, 27, 0.06);
+      }
+      @media (prefers-color-scheme: dark) {
+        .nav-active {
+          background: rgba(255, 255, 255, 0.1);
+        }
+        .card {
+          border-color: rgba(255, 255, 255, 0.12);
+        }
+        .chip {
+          background: rgba(255, 255, 255, 0.08);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50">
+    <!-- NAV -->
+    <header class="border-b border-zinc-200/60 dark:border-zinc-800/60">
+      <div
+        class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between"
+      >
+        <a href="/about.html" class="font-bold tracking-tight"
+          >LabOfMariet<span class="text-brand">.</span></a
+        >
+        <nav class="hidden md:flex items-center gap-2">
+          <a
+            href="/about.html"
+            class="nav-link hover:text-brand"
+            data-nav="about"
+            >The LAB</a
+          >
+          <a
+            href="/projects.html"
+            class="nav-link hover:text-brand nav-active"
+            data-nav="projects"
+            >Servicios</a
+          >
+          <a
+            href="/contact.html"
+            class="nav-link hover:text-brand"
+            data-nav="contact"
+            >Contacto</a
+          >
+        </nav>
+        <div class="flex items-center gap-2">
+          <button
+            id="themeToggle"
+            class="text-sm px-2 py-1 rounded-lg border border-zinc-300 dark:border-zinc-700"
+          >
+            Dark/Light
+          </button>
+          <button
+            id="menu"
+            class="md:hidden p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            aria-label="Abrir menú"
+          >
+            Menu
+          </button>
+        </div>
       </div>
-    </div>
-    <div id="mobile" class="md:hidden hidden border-t border-zinc-200/60 dark:border-zinc-800/60">
-      <nav class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
-        <a href="/about.html"    class="nav-link hover:text-brand" data-nav="about">Sobre mí</a>
-        <a href="/projects.html" class="nav-link hover:text-brand" data-nav="projects">Proyectos</a>
-        <a href="/contact.html"  class="nav-link hover:text-brand" data-nav="contact">Contacto</a>
-      </nav>
-    </div>
-  </header>
+      <div
+        id="mobile"
+        class="md:hidden hidden border-t border-zinc-200/60 dark:border-zinc-800/60"
+      >
+        <nav class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
+          <a
+            href="/about.html"
+            class="nav-link hover:text-brand"
+            data-nav="about"
+            >The LAB</a
+          >
+          <a
+            href="/projects.html"
+            class="nav-link hover:text-brand nav-active"
+            data-nav="projects"
+            >Servicios</a
+          >
+          <a
+            href="/contact.html"
+            class="nav-link hover:text-brand"
+            data-nav="contact"
+            >Contacto</a
+          >
+        </nav>
+      </div>
+    </header>
 
-  <!-- PROJECTS -->
-  <main class="mx-auto max-w-6xl px-4 py-12">
-    <div class="flex items-end justify-between mb-6">
-      <h1 class="text-3xl md:text-4xl font-extrabold">Proyectos</h1>
-      <span class="text-sm opacity-70">Últimos trabajos</span>
-    </div>
+    <!-- SERVICIOS -->
+    <main class="mx-auto max-w-6xl px-4 py-12 space-y-20">
+      <!-- A. Campañas Visuales Creativas -->
+      <section class="text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+          Campañas Visuales Creativas
+        </h2>
+        <p
+          class="text-lg text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto mb-8"
+        >
+          Dirección creativa y producción completa de campañas visuales para tu
+          producto/servicio/marca. Desde el concepto hasta la ejecución final:
+          imágenes, clips motion y hero video.
+        </p>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Tarjeta 1 -->
-      <article class="card hover:shadow-sm transition">
-        <div class="aspect-video rounded-xl bg-zinc-200 dark:bg-zinc-800 mb-3"></div>
-        <h3 class="font-semibold">Proyecto Demo</h3>
-        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">Resumen del proyecto y resultados.</p>
-        <div class="mt-3 flex gap-2 text-xs">
-          <span class="chip">Vue</span><span class="chip">Node</span>
+        <!-- Carrusel pequeño (3 imágenes) -->
+        <div class="mt-8 max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-64 md:h-80">
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-A/1.jpeg"
+                alt="Campaña 1"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-A/ff51fb48-4455-4c8f-8efa-80c25dcfd584.png"
+                alt="Campaña 2"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-A/eb029012-3318-4dae-8c99-1922be354c2b.png"
+                alt="Campaña 3"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+          </div>
         </div>
-        <div class="mt-3 flex gap-3 text-sm">
-          <a class="hover:text-brand" href="#" target="_blank">Código</a>
-          <a class="hover:text-brand" href="#" target="_blank">Live</a>
-        </div>
-      </article>
 
-      <!-- Duplica estas tarjetas y personaliza -->
-      <article class="card hover:shadow-sm transition">
-        <div class="aspect-video rounded-xl bg-zinc-200 dark:bg-zinc-800 mb-3"></div>
-        <h3 class="font-semibold">Proyecto 2</h3>
-        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">Descripción breve.</p>
-        <div class="mt-3 flex gap-2 text-xs">
-          <span class="chip">Nuxt</span><span class="chip">Tailwind</span>
-        </div>
-        <div class="mt-3 flex gap-3 text-sm">
-          <a class="hover:text-brand" href="#" target="_blank">Código</a>
-          <a class="hover:text-brand" href="#" target="_blank">Live</a>
-        </div>
-      </article>
+        <p class="mt-8 text-xl font-medium max-w-2xl mx-auto">
+          “Campañas completas — concepto, estética, storytelling y entrega lista
+          para redes y web. Una mente creativa. infinitas posibilidades
+          visuales.”
+        </p>
+        <a
+          href="/contact.html"
+          class="mt-6 inline-block px-6 py-3 rounded-xl bg-brand text-black font-semibold hover:shadow-lg hover:scale-105 transition-all"
+        >
+          Presenta tu idea
+        </a>
+      </section>
 
-      <article class="card hover:shadow-sm transition">
-        <div class="aspect-video rounded-xl bg-zinc-200 dark:bg-zinc-800 mb-3"></div>
-        <h3 class="font-semibold">Proyecto 3</h3>
-        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">Descripción breve.</p>
-        <div class="mt-3 flex gap-2 text-xs">
-          <span class="chip">API</span><span class="chip">PostgreSQL</span>
-        </div>
-        <div class="mt-3 flex gap-3 text-sm">
-          <a class="hover:text-brand" href="#" target="_blank">Código</a>
-          <a class="hover:text-brand" href="#" target="_blank">Live</a>
-        </div>
-      </article>
-    </div>
-  </main>
+      <!-- B. Realismo Crudo & Belleza Humana -->
+      <section class="text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+          Realismo Crudo & Belleza Humana
+        </h2>
+        <p
+          class="text-lg text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto mb-8"
+        >
+          Especialización en rostros e identidades visuales con carácter.
+          Texturas reales, pieles humanas, imperfección estética como lenguaje
+          visual.
+        </p>
 
-  <footer class="border-t border-zinc-200/60 dark:border-zinc-800/60">
-    <div class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between text-sm">
-      <span>© <span id="y"></span> Tu Nombre</span>
-      <a class="opacity-70 hover:opacity-100" href="https://github.com/tuusuario" target="_blank" rel="noreferrer">GitHub</a>
-    </div>
-  </footer>
+        <div class="mt-8 max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-64 md:h-80">
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-B/1.png"
+                alt="Realismo 1"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-B/2.png"
+                alt="Realismo 2"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-B/eb029012-3318-4dae-8c99-1922be354c2b.png"
+                alt="Realismo 3"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear()
-    const menuBtn=document.getElementById('menu'), mobile=document.getElementById('mobile')
-    menuBtn?.addEventListener('click', ()=> mobile.classList.toggle('hidden'))
-    const themeToggle=document.getElementById('themeToggle')
-    if(localStorage.theme==='dark') document.documentElement.classList.add('dark')
-    themeToggle?.addEventListener('click', ()=>{
-      document.documentElement.classList.toggle('dark')
-      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark':'light'
-    })
-    document.querySelectorAll('[data-nav="projects"]').forEach(a=>a.classList.add('nav-active'))
-  </script>
-</body>
+        <p class="mt-8 text-xl font-medium max-w-2xl mx-auto">
+          “El realismo crudo es lo que conecta. No todas las caras son
+          perfectas, pero todas cuentan una historia.”
+        </p>
+        <a
+          href="/contact.html"
+          class="mt-6 inline-block px-6 py-3 rounded-xl bg-brand text-black font-semibold hover:shadow-lg hover:scale-105 transition-all"
+        >
+          Explora el realismo humano
+        </a>
+      </section>
+
+      <!-- C. IA & Creación de Identidades -->
+      <section class="text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+          IA & Creación de Identidades
+        </h2>
+        <p
+          class="text-lg text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto mb-8"
+        >
+          Creación de rostros, personajes o embajadores digitales coherentes con
+          el universo visual de la marca. Desde modelos sintéticos hasta
+          narrativas visuales completas.
+        </p>
+
+        <div class="mt-8 max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-64 md:h-80">
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-C/1.png"
+                alt="IA 1"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-C/2.jpeg"
+                alt="IA 2"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-C/3.jpeg"
+                alt="IA 3"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-8 text-xl font-medium max-w-2xl mx-auto">
+          “Crea tu propio influencer o modelo de campaña. Inteligencia
+          Artificial al servicio de la autenticidad visual.”
+        </p>
+        <a
+          href="/contact.html"
+          class="mt-6 inline-block px-6 py-3 rounded-xl bg-brand text-black font-semibold hover:shadow-lg hover:scale-105 transition-all"
+        >
+          Crea tu identidad digital
+        </a>
+      </section>
+
+      <!-- D. Fashion & Beauty -->
+      <section class="text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+          Fashion & Beauty
+        </h2>
+        <p
+          class="text-lg text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto mb-8"
+        >
+          Dirección creativa especializada en moda y belleza, donde la estética
+          se encuentra con la identidad. Campañas dirigidas a elevar tu
+          producto.
+        </p>
+
+        <div class="mt-8 max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-64 md:h-80">
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-D/IZQ.png"
+                alt="Fashion 1"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-D/CENTRO.jpg"
+                alt="Fashion 2"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div
+              class="relative overflow-hidden rounded-xl shadow-md bg-black flex items-center justify-center p-2"
+            >
+              <img
+                src="resources/VISUALES-D/DERECHA.png"
+                alt="Fashion 3"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-8 text-xl font-medium max-w-2xl mx-auto">
+          Desde fashion looks de moda hasta productos de cosmética donde todo
+          debe estar milimétricamente pulido.
+        </p>
+        <a
+          href="/contact.html"
+          class="mt-6 inline-block px-6 py-3 rounded-xl bg-brand text-black font-semibold hover:shadow-lg hover:scale-105 transition-all"
+        >
+          Explora moda y belleza
+        </a>
+      </section>
+
+      <!-- FORMULARIO FINAL -->
+      <section
+        class="max-w-2xl mx-auto bg-white dark:bg-zinc-800 p-8 rounded-2xl shadow-lg border border-zinc-200 dark:border-zinc-700"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">
+          ¿Tienes una idea?
+        </h2>
+        <form action="#" method="POST" class="space-y-5">
+          <input
+            type="text"
+            placeholder="Nombre"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          <input
+            type="text"
+            placeholder="Marca / Empresa"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          <textarea
+            placeholder="Breve descripción de tu idea"
+            rows="4"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand resize-none"
+          ></textarea>
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          <input
+            type="tel"
+            placeholder="WhatsApp (opcional)"
+            class="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          <button
+            type="submit"
+            class="w-full py-3 rounded-xl bg-brand text-black font-bold text-lg hover:shadow-lg hover:scale-105 transition-all duration-200"
+          >
+            Enviar propuesta
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="border-t border-zinc-200/60 dark:border-zinc-800/60 mt-20">
+      <div
+        class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between text-sm"
+      >
+        <span>© <span id="y"></span> LabOfMariet</span>
+        <div class="flex gap-4">
+          <a
+            class="opacity-70 hover:opacity-100"
+            href="https://www.linkedin.com/in/mario-fuertes-cabello-753249202/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            class="opacity-70 hover:opacity-100"
+            href="https://www.instagram.com/labofmariet"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Año
+      document.getElementById("y").textContent = new Date().getFullYear();
+
+      // Menú móvil
+      const menuBtn = document.getElementById("menu"),
+        mobile = document.getElementById("mobile");
+      menuBtn?.addEventListener("click", () =>
+        mobile.classList.toggle("hidden")
+      );
+
+      // Dark mode
+      const themeToggle = document.getElementById("themeToggle");
+      if (localStorage.theme === "dark")
+        document.documentElement.classList.add("dark");
+      themeToggle?.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        localStorage.theme = document.documentElement.classList.contains("dark")
+          ? "dark"
+          : "light";
+      });
+
+      // Carruseles simples (uno por sección)
+      const carousels = ["a", "b", "c", "d"];
+      carousels.forEach((id) => {
+        let current = 0;
+        const carousel = document.getElementById(`carousel-${id}`);
+        const slides = carousel.children.length;
+
+        window[`nextSlide_${id}`] = () => {
+          current = (current + 1) % slides;
+          carousel.style.transform = `translateX(-${current * 100}%)`;
+        };
+        window[`prevSlide_${id}`] = () => {
+          current = (current - 1 + slides) % slides;
+          carousel.style.transform = `translateX(-${current * 100}%)`;
+        };
+
+        // Auto-avance opcional
+        setInterval(() => window[`nextSlide_${id}`](), 4000);
+      });
+
+      // Funciones globales para botones
+      function nextSlide(id) {
+        window[`nextSlide_${id.split("-")[1]}`]();
+      }
+      function prevSlide(id) {
+        window[`prevSlide_${id.split("-")[1]}`]();
+      }
+    </script>
+  </body>
 </html>
