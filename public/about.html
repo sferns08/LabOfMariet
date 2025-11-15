@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: { extend: { colors: { brand: '#ffb400' } } },
+      theme: { extend: { colors: { brand: '#C82909' } } },
       darkMode: 'class'
     }
   </script>
@@ -36,7 +36,6 @@
         <a href="/contact.html"  class="nav-link hover:text-brand" data-nav="contact">Contacto</a>
       </nav>
       <div class="flex items-center gap-2">
-        <button id="themeToggle" class="text-sm px-2 py-1 rounded-lg border border-zinc-300 dark:border-zinc-700">☾/☀</button>
         <button id="menu" class="md:hidden p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800" aria-label="Abrir menú">☰</button>
       </div>
     </div>
@@ -56,15 +55,15 @@
 
 
 <!-- CARRUSEL -->
-<div class="relative mt-8 max-w-3xl mx-auto overflow-hidden rounded-2xl shadow-xl h-96 md:h-[600px] bg-black">
-  <div id="carousel" class="flex transition-transform duration-500 ease-in-out h-full">
+<div class="relative mt-8 max-w-5xl mx-auto overflow-hidden">
+  <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
 
     <!-- Slide 1 (ejemplo) -->
-    <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
-      <div class="relative w-full h-full flex items-center justify-center">
+    <div class="min-w-full flex justify-center p-4 md:p-8">
+      <div class="relative">
         <img src="resources/AESTHETIC ALIGNED WITH YOUR BRAND.png" 
              alt="Proyecto 1" 
-             class="max-w-full max-h-full object-contain">
+             class="w-auto h-auto max-w-full">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">AESTHETIC ALIGNED WITH YOUR BRAND</h3>
@@ -74,7 +73,7 @@
         <!-- Slide 2 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/ANY PRODUCT PLACEMENT.png" alt="Proyecto 2" class="max-w-full max-h-full object-contain">
+        <img src="resources/ANY PRODUCT PLACEMENT.png" alt="Proyecto 2" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">ANY PRODUCT PLACEMENT</h3>
@@ -85,51 +84,7 @@
     <!-- Slide 3 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/ART CONCEPTS.png" alt="Proyecto 3" class="max-w-full max-h-full object-contain">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 p-6 text-white">
-          <h3 class="text-xl md:text-2xl font-bold">ART CONCEPTS</h3>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 4 -->
-    <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
-      <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/ART FASHION CAMPAINGS.png" alt="Proyecto 4" class="max-w-full max-h-full object-contain">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 p-6 text-white">
-          <h3 class="text-xl md:text-2xl font-bold">ART FASHION CAMPAINGS</h3>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 5 -->
-    <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
-      <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/ART FASHION CONCEPTS.png" alt="Proyecto 5" class="max-w-full max-h-full object-contain">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 p-6 text-white">
-          <h3 class="text-xl md:text-2xl font-bold">ART FASHION CONCEPTS</h3>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 6 -->
-    <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
-      <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/ART PRODUCTS CAMPAINGS.png" alt="Proyecto 6" class="max-w-full max-h-full object-contain">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 p-6 text-white">
-          <h3 class="text-xl md:text-2xl font-bold">ART PRODUCTS CAMPAINGS</h3>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 7 -->
-    <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
-      <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/AUTHENTIC MODELS.png" alt="Proyecto 7" class="max-w-full max-h-full object-contain">
+        <img src="resources/AUTHENTIC MODELS.png" alt="Proyecto 3" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">AUTHENTIC MODELS</h3>
@@ -140,7 +95,7 @@
     <!-- Slide 8 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/CINEMATIC CAMPAINGS.png" alt="Proyecto 8" class="max-w-full max-h-full object-contain">
+        <img src="resources/CINEMATIC CAMPAINGS.png" alt="Proyecto 4" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">CINEMATIC CAMPAINGS</h3>
@@ -151,7 +106,7 @@
     <!-- Slide 9 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/CUSTOM 3D CHARACTER.png" alt="Proyecto 9" class="max-w-full max-h-full object-contain">
+        <img src="resources/CUSTOM 3D CHARACTER.png" alt="Proyecto 5" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">CUSTOM 3D CHARACTER</h3>
@@ -162,7 +117,7 @@
     <!-- Slide 10 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/CUSTOM 3D CHARACTERS.png" alt="Proyecto 10" class="max-w-full max-h-full object-contain">
+        <img src="resources/CUSTOM 3D CHARACTERS.png" alt="Proyecto 6" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">CUSTOM 3D CHARACTERS</h3>
@@ -173,7 +128,7 @@
     <!-- Slide 11 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/FACIAL EXPRESSIONS.png" alt="Proyecto 11" class="max-w-full max-h-full object-contain">
+        <img src="resources/FACIAL EXPRESSIONS.png" alt="Proyecto 7" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">FACIAL EXPRESSIONS</h3>
@@ -184,7 +139,7 @@
     <!-- Slide 12 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/FASHION CAMPAINGS.png" alt="Proyecto 12" class="max-w-full max-h-full object-contain">
+        <img src="resources/FASHION CAMPAINGS.png" alt="Proyecto 8" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">FASHION CAMPAINGS</h3>
@@ -192,10 +147,32 @@
       </div>
     </div>
 
+    <!-- Slide 12 -->
+    <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
+      <div class="relative w-full h-full flex items-center justify-center">
+        <img src="resources/FASHION CAMPAINGS(2).png" alt="Proyecto 9" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 p-6 text-white">
+          <h3 class="text-xl md:text-2xl font-bold">FASHION CAMPAINGS 2</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 12 -->
+    <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
+      <div class="relative w-full h-full flex items-center justify-center">
+        <img src="resources/FASHION CAMPAINGS(3).png" alt="Proyecto 10" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 p-6 text-white">
+          <h3 class="text-xl md:text-2xl font-bold">FASHION CAMPAINGS 3</h3>
+        </div>
+      </div>
+    </div>
+
     <!-- Slide 13 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/FASHION VISUALS.png" alt="Proyecto 13" class="max-w-full max-h-full object-contain">
+        <img src="resources/FASHION VISUALS.png" alt="Proyecto 11" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">FASHION VISUALS</h3>
@@ -206,7 +183,7 @@
     <!-- Slide 14 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/FOOD CAMPAINGS.png" alt="Proyecto 14" class="max-w-full max-h-full object-contain">
+        <img src="resources/FOOD CAMPAINGS.png" alt="Proyecto 12" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">FOOD CAMPAINGS</h3>
@@ -217,7 +194,7 @@
     <!-- Slide 15 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/INTERIOR DESING.png" alt="Proyecto 15" class="max-w-full max-h-full object-contain">
+        <img src="resources/INTERIOR DESING.png" alt="Proyecto 13" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">INTERIOR DESING</h3>
@@ -228,7 +205,7 @@
     <!-- Slide 16 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/MODELS ALIGNED TO YOUR BRAND.png" alt="Proyecto 16" class="max-w-full max-h-full object-contain">
+        <img src="resources/MODELS ALIGNED TO YOUR BRAND.png" alt="Proyecto 14" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">MODELS ALIGNED TO YOUR BRAND</h3>
@@ -239,7 +216,7 @@
     <!-- Slide 17 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/PRODUCT STORYTELLING.png" alt="Proyecto 17" class="max-w-full max-h-full object-contain">
+        <img src="resources/PRODUCT STORYTELLING.png" alt="Proyecto 15" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">PRODUCT STORYTELLING</h3>
@@ -250,7 +227,7 @@
     <!-- Slide 18 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/STORYTELLING VISUALS.png" alt="Proyecto 18" class="max-w-full max-h-full object-contain">
+        <img src="resources/STORYTELLING VISUALS.png" alt="Proyecto 16" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">STORYTELLING VISUALS</h3>
@@ -261,26 +238,14 @@
     <!-- Slide 19 -->
     <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
       <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/VIBE CONTENT.png" alt="Proyecto 19" class="max-w-full max-h-full object-contain">
+        <img src="resources/VIBE CONTENT.png" alt="Proyecto 17" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 text-white">
           <h3 class="text-xl md:text-2xl font-bold">VIBE CONTENT</h3>
         </div>
       </div>
     </div>
-
-    <!-- Slide 20 -->
-    <div class="min-w-full h-full flex items-center justify-center p-4 md:p-8">
-      <div class="relative w-full h-full flex items-center justify-center">
-        <img src="resources/VISUAL STORYTELLING.png" alt="Proyecto 20" class="max-w-full max-h-full object-contain">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 p-6 text-white">
-          <h3 class="text-xl md:text-2xl font-bold">VISUAL STORYTELLING</h3>
-        </div>
-      </div>
-    </div>
-  
-  </div>
+ </div>
 
   <!-- Botones de navegación -->
   <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-2 rounded-full transition">
@@ -324,7 +289,7 @@
   </p>
 
   <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
-    <a href="/projects.html" class="px-6 py-3 rounded-xl bg-brand text-black font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
+    <a href="/projects.html" class="px-6 py-3 rounded-xl bg-brand text-white font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
       Explorar el lab
     </a>
     <a href="/contact.html" class="px-6 py-3 rounded-xl border-2 border-zinc-400 dark:border-zinc-600 text-zinc-800 dark:text-zinc-200 font-medium text-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all">
@@ -338,7 +303,7 @@
     
     <div class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between text-sm">
       <span>© <span id="y"></span> LabOfMariet</span>
-      <a class="opacity-70 hover:opacity-100" href="https://www.linkedin.com/in/mario-fuertes-cabello-753249202/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="opacity-70 hover:opacity-100" href="https://www.tiktok.com/@labofmariet" target="_blank" rel="noreferrer">TikTok</a>
       <a class="opacity-70 hover:opacity-100" href="https://www.instagram.com/labofmariet" target="_blank" rel="noreferrer">Instagram</a>
     </div>
   </footer>
@@ -349,13 +314,7 @@
     // Menú móvil
     const menuBtn = document.getElementById('menu'), mobile = document.getElementById('mobile')
     menuBtn?.addEventListener('click', ()=> mobile.classList.toggle('hidden'))
-    // Dark mode
-    const themeToggle = document.getElementById('themeToggle')
-    if(localStorage.theme==='dark') document.documentElement.classList.add('dark')
-    themeToggle?.addEventListener('click', ()=>{
-      document.documentElement.classList.toggle('dark')
-      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark':'light'
-    })
+
     // Nav activa
     const here = location.pathname.split('/').pop() || 'about.html'
     const key = here.includes('project')?'projects':here.includes('contact')?'contact':'about'
@@ -366,7 +325,7 @@ const prevBtn = document.getElementById('prev')
 const nextBtn = document.getElementById('next')
 const indicators = document.querySelectorAll('.indicator')
 let currentSlide = 0
-const totalSlides = 20
+const totalSlides = 17
 
 function goToSlide(index) {
   if (index < 0) index = totalSlides - 1
@@ -389,7 +348,7 @@ indicators.forEach(ind => {
 })
 
 // Auto-avance (opcional, cada 5 segundos)
-let autoAdvance = setInterval(() => goToSlide(currentSlide + 1), 5000)
+let autoAdvance = setInterval(() => goToSlide(currentSlide + 1), 3000)
 
 // Pausar al hacer hover
 const carouselContainer = carousel.parentElement
